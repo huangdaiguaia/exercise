@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+</head>
+<body>
+	<script>
+	function out(n=9,k=2){         //out=function(n.k){}
+		for(i=1;i<=n;i++){
+			document.write('<h3>');
+		for(j=1;j<=i;j++){
+			document.write('<span>'+j+'*'+i+'='+(j*i)+'</span> ');
+		}
+			document.write('</h3>');
+		}
+		for(j=0;j<k;j++){               //控制横线的个数
+		document.write('<hr>');
+		}
+	}
+
+	out(2,5);
+	out(9,1);
+	</script>
+</body>
+</html>

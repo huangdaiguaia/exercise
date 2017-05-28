@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+</head>
+<body>
+	<img src="" id="imgid">
+</body>
+<script>
+	//数学对象
+	arr=['a.png','b.png','c.png','d.png','e.png'];
+	rand=Math.random();
+	tot=arr.length;
+	sub=Math.floor(rand*tot);
+
+	imgobj=document.getElementById('imgid');
+	imgobj.src=arr[sub];
+
+</script>
+</html>

@@ -1,0 +1,119 @@
+笔记
+--------------------------------------------
+ctrl+shift+v      
+按原格式粘贴
+
+ctrl+shift+t
+恢复已关闭的标签
+
+显示和隐藏
+1.display
+显示:block|inline
+隐藏:none
+
+2.visibility
+显示:visible
+隐藏:hidden
+
+JS
+-----------------------------------------------
+js中方法和属性前的对象不用写的两种情况:
+1.Global(是js自带的对象): 
+        typeof();         //全称:Global.typeof();
+		parseInt();       //parse:从语法上描述和分析
+		parseFloat();
+		eval();
+		Number();
+		String();
+		Boolean();
+
+2.wondow对象(是浏览器带的标签对象)
+		alert();            //全称:window.alert();
+		confirm();
+		prompt();
+		setInterval();
+		clearInterval();
+		setTimeout();
+		cleraTimeout();
+
+		
+'+':首先,两边只要有一边有字符串,就做字符串连接符使用
+    其次,做加法运算符使用
+
+所有类型->布尔类型(为假的情况)
+1)字符串('')
+2)整形(0)
+3)浮点型(0.0)
+4)null
+5)NaN
+6)undefined
+#对象没有假的
+
+字符串转表达式
+b=(1+1);                                        //完整表达式: b='a=1+1';             
+alert(eval(b));        // eval(b);
+                       // alert(a);
+
+
+json字符串转json对象
+v="{'username':'user1','age':'20'}";            //完整表达式: v="obj={'username':'user1','age':'20'}";
+obj=eval('('+v+')');
+alert(obj.username);
+
+s=s+1;
+s+=1;     //s+=4
+t=s++;      //先把自己的值赋给t,再把自身加1.先赋值后运算(打印)(加号在后)
+t=++s;      //先把自身加1,再把自己的值赋给t.先运算后赋值(打印)(加号在后)
+
+substr(0,5);
+#从0开始,截取5个字符;
+
+slice(start,end);
+#从哪开始.到哪结束,但不包含最后一个位置;
+
+split(reg|正则);
+#字符串分割成数组;
+
+search(reg|正则表达式);//i g
+#字符串查找;
+
+match(reg|正则);
+#字符串匹配;
+
+replace(reg|正则,"str");
+#字符串替换
+
+join("/");
+#把数组连成字符串;
+
+pop();
+#把数组最后一个值弹出    //会改变原数组
+
+shift();
+#把数组最后一个值弹出    //会改变原数组
+
+push();
+#在数组最后压入一个值    //会改变原数组 
+
+unshift();
+#在数组最前面插入一个值  //会改变原数组
+
+splice(1,4);
+#从1开始,截取4个         //会改变原数组
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

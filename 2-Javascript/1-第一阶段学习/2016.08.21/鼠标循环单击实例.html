@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+	img{
+		cursor: pointer;
+		position: absolute;
+		top:0px;
+		left: 0px;
+	}
+	</style>
+</head>
+<body>
+	<img src="b.png" id="imgid">
+</body>
+<script>
+	imgobj=document.getElementById('imgid');
+
+	xs=0;
+	xv=20;
+	ys=0;
+	yv=20;
+	document.onkeydown=function(event){
+		kc=event.keyCode;
+		document.title=kc;
+		switch(kc){
+			case 37:
+			xs-=xv;
+			imgobj.style.left=xs+'px';
+			break;
+
+			case 38:
+			ys-=yv;			
+			imgobj.style.top=ys+'px';
+			break;
+			
+			case 39:
+			xs+=xv;
+			imgobj.style.left=xs+'px';
+			break;
+			
+			case 40:
+			ys+=yv;
+			imgobj.style.top=ys+'px';
+			break;
+			
+		}
+	}
+</script>
+</html>
+
+

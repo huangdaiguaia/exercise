@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+</head>
+<body>
+	<img src="b.png" id="imgid">
+</body>
+<script>
+imgobj=document.getElementById('imgid');
+
+imgobj.onclick=function(){
+	this.src='a.png';
+	this.style.background='#ccc';
+	this.style.borderRadius='256px';  //驼峰式写法
+}
+</script>
+</html>

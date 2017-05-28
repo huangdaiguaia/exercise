@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+</head>
+<body>
+	<img src="" id="imgid">
+</body>
+<script>
+	//日期对象
+	dobj=new Date();
+
+	year=dobj.getFullYear();
+	month=dobj.getMonth();
+	day=dobj.Date();
+	hour=dobj.getHours();
+	minute=dobj.getMinutes();
+	second=dobj.getSeconds();
+
+	str=year+'-'+month+'-'+day+' '+hour+':'+minute+':'+second;
+	alert(str);	
+</script>
+</html>

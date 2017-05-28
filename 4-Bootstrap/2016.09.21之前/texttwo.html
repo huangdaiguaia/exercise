@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'>
+	<title>texttwo</title>
+	<style>
+	*{
+		font-family: 微软雅黑;
+	}
+
+	.carousel{
+		width: 1140px;
+		height: 324px;
+		overflow: hidden;
+		position: relative;
+	}
+	.image_reel{
+		position: absolute;
+		left: 0px;
+		top: 0px;
+	}
+	.image_reel img{
+		float: left;
+	}
+	.paging{
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		display: none;
+	}
+	.paging a{
+		text-decoration: none;
+		color: #fff;
+		padding:0px 5px;
+	}
+	/*.paging a:hover{
+		background: #920000;
+		font-weight: bold;
+	}*/
+	.paging a.active{
+		background: #920000;
+		font-weight: bold;
+	}
+
+	</style>
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+	<div class="carousel">
+		<div class="window">
+			<div class="image_reel">
+				<a href="#"><img src="1.jpg" alt=""/></a>
+				<a href="#"><img src="2.jpg" alt=""/></a>
+				<a href="#"><img src="3.jpg" alt=""/></a>
+			</div>
+		</div>
+		
+		<div class="paging">
+			<a href="#" rel='1'>1</a>
+			<a href="#" rel='2'>2</a>
+			<a href="#" rel='3'>3</a>
+		</div>
+	</div>
+</body>
+<script>
+
+
+$('.paging').show();
+$('.paging a:first').addClass('active');
+
+//让image_reel足够宽
+var imageWidth=$('.window').width();
+var imageSum=$('.image_reel img').size();
+var imageReelWidth=imageWidth*imageSum;
+
+$('.image_reel').css({'width':imageReelWidth});
+
+//幻灯片的关键 向左移图片
+rotate=function(){
+	var triggerID=$active.index();
+	var image_reelPosition=triggerID*imageWidth;
+
+	$('.paging a').removeClass('active');
+	$active.addClass('active');
+
+	$('.image_reel').animate({
+		left:-image_reelPosition
+	},1000);
+};
+
+//此类幻灯片的特点 拽回到第一个
+rotateSwitch=function(){
+	play=setInterval(function(){
+		$active=$('.paging a.active').next();        //当$active是第三个的下一个
+
+		if($active.length===0){                      //第三个的下一个没有 即长度为0
+			$active=$('.paging a:first');            //此时 直接让第一个激活
+		}
+		rotate();                                    //继续执行幻灯片的关键 向左移图片
+	},2000);
+};
+
+rotateSwitch();
+
+//当鼠标划上的时候 停止 移开 继续
+$('.image_reel a').hover(function(){
+	clearInterval(play);
+},function(){
+	rotateSwitch();
+});
+
+//当点击1 2 3 时 让当前点击的这个为$active 然后停止动画 执行幻灯片关键
+$('.paging a').click(function(){
+	$active=$(this);
+	clearInterval(play);
+	rotate();
+	rotateSwitch();
+	return false;                                  //防止a链接跳转 阻止默认行为
+});	
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

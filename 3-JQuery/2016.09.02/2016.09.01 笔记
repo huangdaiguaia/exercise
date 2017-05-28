@@ -1,0 +1,47 @@
+2016.09.01 笔记
+
+------------------------------------------------------
+三个高(jquery)
+屏幕的高:$(window).height()
+文档的总高度:$(document).height()
+鼠标滚动的高:$(window).scrollTop()
+
+js执行的时机
+1)DOM加载完毕
+把js标签放在body体之后
+
+2)资源加载完毕(src 外部的css js)
+$(window).load(function(){
+	
+});
+
+3)jquery中实现等DOM加载完毕
+$(function(){
+	//所有代码都是等DOM加载完毕才会去执行!
+});
+
+键盘码
+1)鼠标码
+$(document).mousedown(function(){
+	code=event.button;
+	alert(code);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>页面加载后累加，自加1</title>
+	<style>
+		body{
+			font:700 30px/1.5 arial;
+			text-align: center;
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			var body=document.body;
+			var i=0;
+
+			setInterval(updateNum,1000);
+			
+			// updateNum();
+
+			function updateNum(){
+				body.innerHTML=++i;
+			}
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

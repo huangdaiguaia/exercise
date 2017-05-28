@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+</head>
+<body>
+	<h1>aaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaa</h1>
+	<h1>aaaaaaaaaaaaa</h1>
+</body>
+<script>
+	objs=document.getElementsByTagName('h1');
+	for(i=0;i<objs.length;i++){
+		objs[i].setAttribute('num',0);
+
+		objs[i].onclick=function(){
+			num=parseInt(this.getAttribute('num'));
+			if(num%2==0){
+				this.style.background='#ccc';
+			}else{
+				this.style.background='#fff';
+			}
+			this.setAttribute('num',num+1);
+		}
+	}
+</script>
+</html>

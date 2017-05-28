@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'>
+	<title>index</title>
+	<style>
+	*{
+		font-family: 微软雅黑;
+	}	
+	
+	</style>
+	<link rel="stylesheet" href="bs/css/bootstrap.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1 class='page-header'>Bootstrap前端框架 </h1>
+		
+		<ul class="nav nav-tabs">
+			<li class='active'>
+				<a href="">linux</a>
+			</li>
+			<li class=''>
+				<a href="">linux</a>
+			</li>
+			<li class=''>
+				<a href="">linux</a>
+			</li>
+		</ul>
+	</div>
+</body>
+<script>
+	$('li').mouseenter(function(){
+		$(this).addClass('active');
+		$('li').not($(this)).removeClass('active');
+	})
+</script>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+2016.08.29 笔记
+
+-------------------------------------
+
+元素对象的标准属性
+obj.id
+obj.className
+obj.style
+obj.title
+
+元素对象的非标准属性:可以是任何东西
+获取:getAttribute
+设置:setAttribute
+
+元素对象的js属性
+obj.tagName       标签名:h1
+obj.innerHTML	  标签里面的内容:linux is <i>very</i> much!
+obj.outerHTML  标签的html代码:<h1 info='linux is very much!' id='hid' class='hcls'>linux is <i>very</i> much!</h1>
+obj.textContent 标签里面的文本 不要里面的HTML代码:linux is very much!
+
+获取dom元素对象的方法:
+document.getElementById()
+document.getElementsByTagName()
+document.getElementsByClassName()
+document.getElementsByName()
+
+直接获取dom元素对象集合:
+document.links
+document.images
+document.forms
+document.anchors  //锚点
+tableObj.rows
+tableRowObj.cells
+selectObj.options
+
+
+
+
+
+
+
+
+
+
+
+
+

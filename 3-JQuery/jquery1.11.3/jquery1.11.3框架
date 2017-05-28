@@ -1,0 +1,68 @@
+jquery1.11.3框架 16.9.27
+
+-----------------------------------------------------------------------
+
+1.取消了1.8.3之前的一些常用事件,如下:
+.bind();
+.unbind();
+.live();
+.die();
+.toggle(fn,fn);
+
+2.新增了如下事件,如下:
+.on();
+.off();
+
+3.如何在1.9.0之后的版本使用1.8.3以前的常用事件,代替方法:
+1)live();
+$(document).on('click','.close',func);
+
+eg:
+$('.close').live('click',function(){
+  $(this).parent().hide(1000);
+});
+
+$(document).on('click','close',function(){
+  $(this).parent().hide(1000);  //文档中所有的 现在和未来的都绑上事件
+});
+
+$('.close').on('click',function(){
+  //只绑现在的
+});
+
+
+2)die();
+$(document).off('click','.close');
+
+3)bind();
+$('.close').on('click',func);
+
+4)unbind();
+$('.close').off('click');
+
+5)toggle();
+<!-- i=0;
+$('img').click(function(){
+	if(i%2==0){
+	this.src='b.png';
+    }else{
+    this.src='a.png';
+    }
+    i++;
+}); -->
+
+jquery.toggle.js插件
+$.fn.toggle= function( fn, fn2 ) {
+    var args = arguments,guid = fn.guid || $.guid++,i=0,
+    toggler = function( event ) {
+      var lastToggle = ( $._data( this, "lastToggle" + fn.guid ) || 0 ) % i;
+      $._data( this, "lastToggle" + fn.guid, lastToggle + 1 );
+      event.preventDefault();
+      return args[ lastToggle ].apply( this, arguments ) || false;
+    };
+    toggler.guid = guid;
+    while ( i < args.length ) {
+      args[ i++ ].guid = guid;
+    }
+    return this.click( toggler );
+}

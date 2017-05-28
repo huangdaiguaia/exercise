@@ -1,0 +1,350 @@
+*{
+	height: auto;
+	margin: 0;
+	padding: 0;
+	font-family: 微软雅黑;
+}
+body{
+	min-width: 1200px;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/*head css*/
+header .top{
+	width: 100%;
+	height: 62px;
+	/*background: #fff;*/
+	line-height: 62px;
+}
+header .top .left i{
+	background: url(../img/logo.png) no-repeat center;
+	background-size: 70px;
+	width: 70px;
+	height: 70px;
+	display: inline-block;
+	float: left;
+	margin-left: 80px;
+	margin-top: -1px;
+	margin-right: 10px;
+}
+header .top .left h1{
+	float: left;
+	width: 70px;
+	font-size: 20px;
+	color: #777;
+}
+header .top .nav{
+	width: 800px;
+	float: right;
+}
+header .top .nav ul li{
+	float: left;
+	margin-right: 45px;
+	color: #808183;
+	/*font-weight: bold;*/
+}
+header .top .nav ul .login{
+	background: url(../img/login.png) no-repeat left;
+	/*display: inline-block;*/
+	/*background-size: 20px;*/
+	/*height: 18px;*/
+	/*width: 20px;*/
+	padding-left:30px;
+	margin-right: 10px;
+}
+header .top .nav ul li.on{
+	color: #E74E48;
+}
+header .top .titleSlider{
+	border-bottom: 3px solid #E74E48;
+	width: 64px;
+	height: 15px;
+	position: absolute;
+	top:45px;
+	left:535px;
+}
+
+
+header .banner{
+	background: url(../img/bg.jpg) no-repeat center;
+	height: 690px;
+	width: 100%;
+	background-size: cover;
+	color: #000;
+	position: relative;
+}
+header .banner h1,h2{
+	font-weight: 100;
+}
+header .banner h1{
+	font-size: 65px;
+    padding-top: 250px;
+    padding-left: 120px;
+}
+header .banner h2{
+	font-size: 20px;
+	padding-left: 120px;
+	padding-bottom: 15px;
+}
+header .banner .try{
+	width: 333px;
+	height: 66px;
+	background: #E8504F;
+	line-height: 66px;
+	text-align: center;
+	margin-left: 120px;
+}
+header .banner .try a{
+	font-size: 30px;
+	color: #fff;
+}
+
+header .introduce{
+	height: 335px;
+	width: 1200px;
+	margin:auto;
+	margin-top: 20px;
+}
+header .introduce .nav{
+	height: 40px;
+	width: 100%;
+	border-bottom: 2px solid #E8504F;
+}
+header .introduce .nav .title{
+	position: relative;
+	width: 130px;
+	height: 30px;
+	float: left;
+	line-height: 40px;
+	font-size: 20px;
+	color: #777;
+	text-indent: 1em;
+	/*border-left: 2px solid #E8504F;*/
+}
+header .introduce .nav .title div{
+	height: 23px;
+    width: 0;
+    border: 1px solid #E8504F;
+    position: absolute;
+    left: 0;
+    top: 9px;
+}
+header .introduce .nav .left{
+	height: 40px;
+	float: left;
+}
+header .introduce .nav .left li{
+	float: left;
+    padding: 0 20px;
+    font-size: 15px;
+    /*text-align: center;*/
+    line-height: 39px;
+    color: #777;
+    /*font-weight: 800;*/
+    /*position: relative;*/
+    cursor: pointer;
+}
+
+header .introduce .specific{
+	width:1200px;
+	/*height: 300px;*/
+	/*background: #ccc;*/
+}
+header .introduce .specific .left{
+	width: 600px;
+	float: left;
+}
+header .introduce .specific .right{
+	width: 600px;
+	float: left;
+}
+header .introduce .specific .one{
+	width: 130px;
+	padding-left: 18px;
+}
+header .introduce .specific .two{
+	width: 400px;
+}
+header .introduce .specific  li{
+	height: 50px;
+	border-bottom: 2px solid #ccc;
+}
+header .introduce .specific li div{
+	float: left;
+	line-height: 50px;
+	font-size: 15px;
+	color: #777;
+}
+
+
+/*section*/
+section .con1{
+	height: 360px;
+	background: url(../img/logo1.0.png) no-repeat center #EDEDEC;
+	font-size: 50px;
+	color: #777;
+}
+section .con1 p{
+	text-align: center;
+	padding-top: 260px;
+}
+
+.footer{
+	/*background: #f9f9f9;*/
+	margin-top: 20px;
+}
+.footer .footerTopBox{
+	background: #333;
+}
+.footer .footerTopBox .footerTop{
+	width: 1200px;
+	margin:0 auto;
+	height: 84px;
+	border-bottom: 1px solid #494949;
+}
+.footer .footerTopBox .footerTop .footerContact{
+	float: left;
+	/*height: 40px;*/
+	line-height: 40px;
+	padding: 22px 0;
+}
+.footer .footerTopBox .footerContact .publicIcon{
+	background: url('../img/public-24.png') no-repeat -144px -22px;
+	width: 40px;
+	height: 40px;
+	margin-right: 18px;
+	display: inline-block;
+	/*vertical-align: middle;*/
+	float: left;
+	/*overflow: hidden;*/
+}
+
+
+/*.topTenBox .topTenNavBox h3 span{
+	color: #d43d4e;
+	font-size: 14px;
+	margin-left: 5px;
+	display: inline-block;
+	vertical-align: middle;
+}*/
+.footer .footerTopBox .footerTop .footerContact b{
+	font-size: 24px;
+	color: #c00;
+	margin-right: 25px;
+	float: left;
+}
+.footer .footerTopBox .footerTop .footerContact span{
+	font-size: 14px;
+	color: #fff;
+	margin-right: 8px;
+	float: left;
+}
+
+
+.footer .footerTopBox .footerTop .footerTopRight{
+	float: right;
+	/*height: 32px;*/
+	padding: 26px 0;
+}
+.footer .footerTopBox .footerTop .footerTopRight .ftRight-tit{
+	float: left;
+	line-height: 32px;
+	color: #fff;
+	padding-right: 10px;
+}
+.footer .footerTopBox .footerTop .footerTopRight .ftRight-form{
+	float: left;
+	width: 240px;
+	height: 30px;
+	border:1px solid #494949;
+	/*position: relative;*/
+}
+.footer .footerTopBox .footerTop .footerTopRight .ftRight-form input{
+	width: 190px;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 6px;
+	background:0;
+	border: 0;
+	float: left;
+	/*color: #fff;*/
+	/*outline: 0;*/
+}
+.footer .footerTopBox .footerTop .footerTopRight .ftRight-form .publicIcon{
+	background: url('../img/public-24.png') no-repeat -133px 4px;
+	width: 22px;
+	height: 28px;
+	display: inline-block;
+	float: left;
+	margin:3px 0 0 10px;
+	cursor: pointer;
+	/*overflow: hidden;*/
+}
+
+.footer .footerBotBox{
+	/*width: 1200px;*/
+	background: #333;
+	text-align: left;
+	height: 200px;
+}
+.footer .footerBotBox .footer-tmallinfo{
+	width: 1200px;
+	margin:0 auto;
+	/*color: #fff;*/
+	line-height: 25px;
+}
+
+
+.footerBotBox p{
+	padding: 5px 0;
+}
+.footerBotBox p a{
+	margin-right: 3px;
+	color: #fff;
+	font-size: 14px;
+}
+.footer .footerBotBox .footer-otherlink{
+	width: 1200px;
+	margin:0 auto;
+	color: #fff;
+	line-height: 25px;
+}
+.footerBotBox .footer-copyright{
+	line-height: 20px;
+	color: #a4a4a4;
+	font-size: 15px;
+	width: 1200px;
+	margin:0 auto;
+}
+.footerBotBox .footer-copyright a{
+	color: #a4a4a4;
+	margin-right: 65px;
+}
+.footerBotBox .footer-copyright b{
+	display: block;
+	font-weight: 400;
+}
+.footerBotBox .footer-fp-img{
+	margin-top: 10px;
+	width: 1200px;
+	/*padding-left: 75px;*/
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

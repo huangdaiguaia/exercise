@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+	#div1{
+		position: absolute;
+		top:0px;
+		left: 0px;
+		background: #ccc;
+		border-radius: 256px;
+		overflow: hidden;
+	}
+
+	</style>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<div id='div1'>
+		<img src="a.png">
+	</div>
+</body>
+<script>
+	function drag(obj){
+		obj.bind('mousedown',start);
+
+		function start(event){
+			deltaX=event.clientX-obj.offset().left;
+			deltaY=event.clientY-obj.offset().top;
+			// deltaX=obj.offset().left;//不行
+			// deltaY=obj.offset().top;
+
+			$(document).bind('mousemove',move);
+			$(document).bind('mouseup',stop);
+
+			//阻止默认行为的发生
+			//阻止事件冒泡的发生
+			return false;
+		}
+
+		function move(event){
+			obj.css({
+				'left':(event.clientX-deltaX)+'px',
+				'top':(event.clientY-deltaY)+'px'
+				// 'left':deltaX+'px',
+				// 'top':deltaX+'px'
+			})
+			return false;
+		}
+
+		function stop(){
+			$(document).unbind('mousemove',move);
+			$(document).unbind('mouseup',stop);
+		}
+
+	}
+
+	obj=$('#div1');
+	drag(obj);
+</script>
+</html>

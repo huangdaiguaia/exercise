@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'>
+	<title>index</title>
+	<style>
+	*{
+		font-family: 微软雅黑;
+	}
+	.container{
+		width: 1140px;
+		padding: 0px 15px;
+		margin: 0 auto;
+	}
+	
+	.window{
+		height: 300px;
+		overflow: hidden;
+		position: relative;
+	}
+	.window img{
+		position: absolute;
+		top:0px;
+		left: 0px;
+	}
+
+	</style>
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1 class="page-header">幻灯片(渐变)</h1>
+		
+		<div class="window">
+			<img src="1.jpg" alt="">
+			<img src="2.jpg" alt="">
+			<img src="3.jpg" alt="">
+		</div>
+	</div>
+</body>
+<script>
+	setInterval(function(){
+		imgs=$('.window img');
+
+		imgs.eq(2).stop().fadeOut(500,function(){
+			$(this).show().prependTo('.window')
+		});
+	},1000);
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

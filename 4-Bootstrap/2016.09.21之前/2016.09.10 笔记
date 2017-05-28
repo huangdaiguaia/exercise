@@ -1,0 +1,81 @@
+2016.09.10 笔记
+-------------------------------------------------
+h1{$$$$$$$$$$$$$$$}*100     按tab键
+
+(li>a{$})*5                 按tab键
+<li><a href="">1</a></li>
+<li><a href="">2</a></li>
+<li><a href="">3</a></li>
+<li><a href="">4</a></li>
+<li><a href="">5</a></li>
+
+(tr>td{$$$}*3)*5            按tab键
+tr>
+	<td>001</td>
+	<td>002</td>
+	<td>003</td>
+</tr>
+<tr>
+	<td>001</td>
+	<td>002</td>
+	<td>003</td>
+</tr>
+<tr>
+	<td>001</td>
+	<td>002</td>
+	<td>003</td>
+</tr>
+<tr>
+	<td>001</td>
+	<td>002</td>
+	<td>003</td>
+</tr>
+<tr>
+	<td>001</td>
+	<td>002</td>
+	<td>003</td>
+</tr>
+
+holder.min.js 用法
+<link rel="stylesheet" href="bs/css/bootstrap.min.css">
+<script src="bs/js/jquery.min.js"></script>
+<script src="bs/js/bootstrap.min.js"></script>
+<script src="bs/js/holder.min.js"></script>
+
+<img src="holder.js/100%x200" alt=""> 没弄出
+
+&nbsp;  Non-Breaking Space缩写
+
+
+
+
+[最复杂的幻灯片 酒仙网的小幻灯片(一直向右 但点击1 2 3是又是拽回到前面)]  无缝滚动
+
+[抢购倒计时]
+
+[cxSelect城市选择插件]
+
+[dragDrop插件]---------- jquery使用插件4 5集 似乎不实用
+
+[放大镜插件] ---------------- 6 9 集
+
+[kindEditer在线编辑器]
+
+[uploadfy文件上传插件]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

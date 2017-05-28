@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+	img{
+		cursor: pointer;
+		position: absolute;
+		top:0px;
+		left: 0px;
+	}
+	</style>
+</head>
+<body>
+	<img src="b.png" id="imgid">
+</body>
+<script>
+imgobj=document.getElementById('imgid');
+
+document.onmousemove=function(event){
+	x=event.clientX;
+	y=event.clientY;
+	document.title=x+'-'+y;
+
+	imgobj.style.left=x+'px';
+	imgobj.style.top=y+'px';
+}
+</script>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'>
+	<title>index</title>
+	<style>
+	*{
+		font-family: 微软雅黑;
+	}
+
+	.navs{
+		padding: 15px;
+		display: none;
+	}	
+	
+	</style>
+	<link rel="stylesheet" href="bs/css/bootstrap.css">
+	<script src="bs/js/jquery.min.js"></script>
+	<script src="bs/js/bootstrap.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1 class='page-header'>Bootstrap前端框架 </h1>
+
+		<div class="row">
+			<div class="col-md-2">
+				<ul class="nav nav-pills nav-stacked">
+					<li class='active'>
+						<a href="">linux</a>
+					</li>
+					<li class=''>
+						<a href="">php</a>
+					</li>
+					<li class=''>
+						<a href="">java</a>
+					</li>
+				</ul>	
+			</div>
+
+			<div class="col-md-10">
+				<div class="row navs">
+					<p class="lead">linux is very much!linux is very much!linux is very much!linux is very much!linux is very much!linux is very much!linux is very much!linux is very much!linux is very much!linux is very much!</p>
+				</div>
+
+				<div class="row navs">
+					<p class="lead">php is very much!php is very much!php is very much!php is very much!php is very much!php is very much!php is very much!php is very much!php is very much!php is very much!</p>
+				</div>
+
+				<div class="row navs">
+					<p class="lead">java is very much!java is very much!java is very much!java is very much!java is very much!java is very much!java is very much!java is very much!java is very much!java is very much!</p>
+				</div>
+			</div>
+
+		</div>
+		
+	</div>
+</body>
+<script>
+	$('li').mouseenter(function(){
+		$(this).addClass('active');
+		$('li').not($(this)).removeClass('active');
+
+		idx=$(this).index('li');
+		$('.navs').eq(idx).show();
+		$('.navs').not($('.navs').eq(idx)).hide();
+	})
+
+	$('.navs').eq(0).show();
+</script>
+</html>
+
+
+
+
+
+
+
+
+

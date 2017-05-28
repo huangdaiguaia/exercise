@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style>
+		*{
+			font-family: 微软雅黑;
+		}
+	</style>
+</head>
+<body>
+	<h1>linux</h1>
+	<p>linux is very much!linux is very much!linux is very much!linux is very much!linux is very much!linux is very much!</p>
+	<h1>linux</h1>
+	<p>linux is very much!linux is very much!linux is very much!linux is very much!linux is very much!linux is very much!</p>
+	<h1>linux</h1>
+	<p>linux is very much!linux is very much!linux is very much!linux is very much!linux is very much!linux is very much!</p>
+</body>
+<script>
+	objs=document.getElementsByTagName('h1');
+	ps=document.getElementsByTagName('p');
+
+	for(i=0;i<objs.length;i++){
+		objs[i].setAttribute('line',i);//行号
+		objs[i].setAttribute('num',0);//设置元素对象的非标准属性,在这里相当于计数器
+		ps[i].id=i;
+
+		objs[i].onclick=function(){
+			num=parseInt(this.getAttribute('num'))//把字符串化为整形
+			line=this.getAttribute('line');
+			np=document.getElementById(line);
+
+			if(num%2==0){
+				np.style.display='none';
+			}else{
+				np.style.display='block';
+			}
+
+			this.setAttribute('num',num+1);
+		}
+
+	}
+</script>
+</html>
